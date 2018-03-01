@@ -1,0 +1,173 @@
+@charset "utf-8";
+.clear {
+    clear: both;
+}
+.textEllipsis{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.space_main {
+    margin: auto auto 100px;
+    width: 1200px;
+}
+.bk_main_l { 
+	width: 350px; 
+	float: left; 
+	margin-top: 10px 
+}
+.bk_main_r { 
+	width: 840px; 
+	float: right; 
+	position: relative; 
+	margin-top: 10px 
+}
+.box-wrapper {
+	background: #ffffff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.35);
+    width: 100%; 
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+.box-wrapper h2 {
+    color: #333333;
+	font-size: 14px;
+    font-weight: bold;
+    height: 100%;
+    line-height: 44px;
+    margin: 0;
+    padding-left: 15px;
+    border-bottom: 1px solid #d9d9d9;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+    position: relative;
+}
+.pe2 { padding: 13px 0 15px 12px }
+
+.box-wrapper h2 div { position: absolute; top: 0; right: 10px; font-weight: normal; }
+.box-wrapper h2 div span{ color: red; }
+#group_info .group_info {
+    padding: 10px;
+}
+#group_info .group_info .left{width: 80px;height: 80px;float: left;}
+#group_info .group_info .img{width: 80px;height: 80px;overflow: hidden;border-radius: 50%;text-align: center;vertical-align: middle;display: table-cell;}
+#group_info .group_info .img img{max-height: 80px;max-width: 80px;vertical-align:middle;}
+#group_info .group_info .info {float: right;width: 250px;height: 80px;padding-left: 10px;}
+#group_info .group_info .info div{width: 100%;height: 26px;line-height: 26px;}
+#group_info .group_info .info .groupName{font-size: 16px;}
+#group_info .group_info .info .groupName span{color: #FF6600;}
+#group_info .group_info .info .groupId{margin-top: 1px;font-size: 13px;}
+#group_info .group_info .info .groupId img{vertical-align: text-bottom;}
+#group_info .group_info .info .groupAdmin{margin-top: 1px;font-size: 13px;}
+#group_info .group_info .groupDesc {line-height: 25px;text-indent:20px;padding-top: 5px;word-break: break-all; }
+#group_info .group_info .btns button {border-radius: 3px; font-size: 14px; margin-top: 10px; padding: 5px;}
+#group_info .group_info .btns span {color: #FF6600;}
+
+/*list*/
+.group_member_list { padding: 0 0 10px 0}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    border-top: 1px solid #e7eaec;
+    line-height: 1.42857;
+    padding: 8px;
+    vertical-align: middle;
+}
+.group_member_list table {margin: 0;}
+.group_member_list .img {width: 30px; height: 30px;display: table-cell;vertical-align: middle;border-radius: 50%;}
+.group_member_list .img img{max-width: 30px; max-height: 30px;vertical-align: middle;}
+.group_member_list .table .name {width: 80px}
+.group_member_list .table .danwei {width: 110px}
+.group_member_list .table .bumen {width: 60px}
+.label {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    text-shadow: none;
+}
+.badge-primary, .label-primary {
+    background-color: #1ab394;
+    color: #fff;
+}
+.badge-warning, .label-warning {
+    background-color: #f8ac59;
+    color: #fff;
+}
+.badge-info, .label-info {
+    background-color: #23c6c8;
+    color: #fff;
+}
+.badge-danger, .label-danger {
+    background-color: #ed5565;
+    color: #fff;
+}
+.clients-list table tr td {
+    border: medium none;
+    height: 46px;
+    vertical-align: middle;
+}
+.client-avatar img {
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    margin-left: 10px;
+}
+.client-link {
+    color: inherit;
+    font-weight: 600;
+}
+.client-link a {
+    cursor: pointer;
+}
+.contact-type {
+    color: #c1c3c4;
+    width: 20px;
+}
+#addGroupDialogDiv {font-size: 13px;margin-bottom: 0;}
+#addGroupDialogDiv label {text-align: right;}
+#addGroupDialogDiv img{max-width: 35px;max-height: 35px;}
+#addGroupDialogDiv .mb10 {margin-bottom: 10px;}
+
+#addGroupMemberDiv {width: 680px;height:510px;}
+#addGroupMemberDiv .addGroupMemberType{padding: 0;}
+#addGroupMemberDiv #addGroupMemberTable{height: 400px;}
+#addGroupMemberDiv .selMemberDiv .che_{line-height: 35px;margin: 0;}
+#addGroupMemberDiv .selMemberDiv .che_ input{vertical-align: text-bottom;}
+#addGroupMemberDiv .addGroupMemberType li{list-style: none;float: left;min-width: 70px;height: 28px;background-color: #eaebec;line-height: 28px;text-align: center;margin: 0px 10px 0 0;color: #5e5e5e;padding: 0 10px;}
+#addGroupMemberDiv .addGroupMemberType li.active{background-color: #188eee;}
+#addGroupMemberDiv .addGroupMemberType li>a{color:#666;font-size: 12px;display: block;}
+#addGroupMemberDiv .addGroupMemberType li.active>a{color:#FFF;}
+#addGroupMemberDiv #addGroupMemberSelectInput{border-radius: 0; margin-right: 0px;}
+#addGroupMemberDiv #addGroupMemberSelectInput input{border-radius: 0;height:34px;}
+#addGroupMemberDiv #addGroupMemberSelectInput .btn{background-color: #3399FF;border: none;padding: 7px 12px;}
+#addGroupMemberDiv table {margin-bottom: 0px;}
+#addGroupMemberDiv table .name{width: 134px;}
+#addGroupMemberDiv table .unit{width: 134px;}
+#addGroupMemberDiv table .org{width: 134px;}
+
+.btn_ul li{list-style: none;float: left;min-width: 70px;height: 28px;background-color: #eaebec;line-height: 28px;text-align: center;margin: 0px 10px 0 0;color: #5e5e5e;padding: 0 10px;}
+.btn_ul li.active{background-color: #188eee;}
+.btn_ul li>a{color:#666;font-size: 12px;display: block;}
+.btn_ul li.active>a{color:#FFF;}
+/*分类样式*/
+.bk-classify {
+    position: relative;
+}
+
+.bk-classify .category-btn {
+    position: absolute;
+    display: none;
+    top: 11px;
+    right: 10px;
+}
+
+.bk-classify ul li.active {
+    background-color: #e2e2e2;
+}
+.bk-classify ul li {
+    padding: 0 10px;
+}
+
+.bk-classify ul li a {
+    display: block;
+    padding-left: 5px;
+    line-height: 34px;
+    font-size: 12px;
+    color: #5c5c5c;
+    border-bottom: 1px solid #e2e2e2;
+}

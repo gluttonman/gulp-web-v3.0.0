@@ -1,0 +1,290 @@
+.clear {clear: both;}
+.textEllipsis{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.icon-down-white {background-image: url("../../images/opera/down.png");}
+.oper-icon {display: inline-block;height: 19px;margin: 0 2px;width: 20px;}
+#groupMain {width: 915px;}
+#groupMain .nav-tabs {margin: 0;border: none;background-color: #FFF;}
+#groupMain .nav-tabs > li {height: 45px;}
+#groupMain .nav-tabs > li.active {border-bottom: 2px solid #278cde;}
+#groupMain .nav-tabs > li > a {padding: 12px 34px;background-color: #FFF;border: none;color: #3e3e3e;border-radius: 0;font-size: 12px;}
+#groupMain .nav-tabs > li.active > a {color: #278cde;}
+#groupMain .tab-content {background-color: #FFF;border-top: 1px solid #CCC;margin-top:5px;}
+
+#groupMain .selectBanner {}
+#groupMain .selectBanner .bannerLeft {float: left;padding-left: 10px;margin-top: 18px;}
+#groupMain .selectBanner .bannerLeft .btn_ul {padding: 0;}
+#groupMain .selectBanner .bannerLeft li{list-style: none;float: left;min-width: 70px;height: 28px;background-color: #eaebec;line-height: 28px;text-align: center;margin: 0px 5px;color: #5e5e5e;padding: 0 10px;}
+#groupMain .selectBanner .bannerLeft li.active{background-color: #188eee;}
+#groupMain .selectBanner .bannerLeft li>a{color:#666;font-size: 12px;display: block;}
+#groupMain .selectBanner .bannerLeft li.active>a{color:#FFF;}
+
+#groupMain .selectBanner .bannerLeft .groupRadios {padding-left: 20px;padding-top: 3px;}
+#groupMain .selectBanner .bannerLeft .groupRadios input{margin-top: 2px;}
+
+#groupMain .selectBanner .bannerRight {float: right;margin-top: 14px;}
+#groupMain .selectBanner .bannerRight #search_input{border-radius: 0; margin-right: 15px;}
+#groupMain .selectBanner .bannerRight #search_input input{border-radius: 0;height:34px;}
+#groupMain .selectBanner .bannerRight #search_input .btn{background-color: #3399FF;border: none;padding: 7px 12px;}
+#groupMain .selectBanner .bannerRight #my_search_input input{border-radius: 0;height:34px;}
+#groupMain .selectBanner .bannerRight #my_search_input .btn{background-color: #3399FF;border: none;padding: 7px 12px;}
+#groupMain .selectBanner .bannerRight #my_search_input {float: left;margin-right: 15px;}
+#groupMain .selectBanner .bannerRight .createGroupBtn{background-color: #ff4e00;float: left;border: none;color: #FFF;padding: 7px 12px;margin-right: 15px;font-size: 14px;width: 155px;}
+
+#groupMain .groupList{}
+#groupMain .groups{float: left;width: 380px;height: 177px;margin-left: 15px;margin-top: 15px; border: 1px solid #CCC;padding: 8px 11px;}
+#groupMain .groups:hover{background-color: #FCEDE2;cursor: pointer;}
+#groupMain .groups .left{width: 80px;height: 80px;float: left;}
+#groupMain .groups .img{width: 80px;height: 80px;overflow: hidden;border-radius: 50%;text-align: center;vertical-align: middle;display: table-cell;}
+#groupMain .groups .img img{max-height: 80px;max-width: 80px;vertical-align:middle;}
+#groupMain .groups .info {float: right;width: 276px;height: 80px;padding-left: 18px;}
+#groupMain .groups .info div{width: 100%;height: 26px;line-height: 26px;}
+#groupMain .groups .info .groupName{font-size: 15px;font-weight: bold;color: #5686A3;}
+#groupMain .groups .info .groupName span{color: #FF6600;}
+#groupMain .groups .info .groupId{margin-top: 1px;font-size: 12px;color: #3e3e3e;}
+#groupMain .groups .info .groupId img{vertical-align: text-bottom;}
+#groupMain .groups .info .groupAdmin{margin-top: 1px;font-size: 12px;color: #3e3e3e;}
+#groupMain .groups .groupDesc {height: 55px;line-height: 24px;text-indent:20px;overflow: hidden;padding-top: 5px;font-size: 12px;color: #6c6c6c;word-break: break-all; }
+#groupMain .groups .btns {height: 32px;line-height: 32px;float: right;}
+#groupMain .groups .btns button {padding: 2px 5px;border-radius: 0;font-size: 12px;}
+#groupMain .groups .btns span {color: #FF6600;}
+
+#addGroupDialogDiv {font-size: 13px;margin-bottom: 0;}
+#addGroupDialogDiv label {text-align: right;}
+#addGroupDialogDiv img{max-width: 35px;max-height: 35px;}
+#addGroupDialogDiv .mb10 {margin-bottom: 10px;}
+
+#manageGroupMemberDiv {width: 680px;height: 480px; }
+#manageGroupMemberDiv .manageTop {height: 34px;line-height: 34px;margin-bottom: 5px;}
+#manageGroupMemberDiv .manageTop > span{font-size: 15px;}
+#manageGroupMemberDiv .manageTop > button{float: right;}
+#manageGroupMemberDiv .manageTable {border: 1px solid #DDDDDD;height: 398px;}
+#manageGroupMemberDiv .manageTable table{margin: 0;}
+#manageGroupMemberDiv .manageTable .name{width: 113px;}
+#manageGroupMemberDiv .manageTable .unit{width: 123px;}
+#manageGroupMemberDiv .manageTable .department{width: 163px;}
+#manageGroupMemberDiv .manageTable .admin{width: 88px;}
+#manageGroupMemberDiv .manageTable .caozuo{width: 110px;text-align: center;}
+#manageGroupMemberDiv .manageTable table .remove {margin-right: 9px;color: #428BCA;margin-left: 5px;}
+#manageGroupMemberDiv .manageTable table .set {color: #428BCA;margin-left: 5px;}
+#manageGroupMemberDiv .manageTable table .cancel {color: #428BCA;margin-left: 5px;}
+#manageGroupMemberDiv .manageTable table .no {margin: 0 auto;}
+
+.groupResContent {}
+#groupMain .selectBanner .bannerRight #paper_search_input{border-radius: 0; margin-right: 15px;}
+#groupMain .selectBanner .bannerRight #paper_search_input input{border-radius: 0;height:34px;}
+#groupMain .selectBanner .bannerRight #paper_search_input .btn{background-color: #3399FF;border: none;padding: 7px 12px;}
+#groupMain .selectBanner .bannerRight #beike_search_input{border-radius: 0; margin-right: 15px;}
+#groupMain .selectBanner .bannerRight #beike_search_input input{border-radius: 0;height:34px;}
+#groupMain .selectBanner .bannerRight #beike_search_input .btn{background-color: #3399FF;border: none;padding: 7px 12px;}
+#groupMain .selectBanner .bannerRight #weike_search_input{border-radius: 0; margin-right: 15px;}
+#groupMain .selectBanner .bannerRight #weike_search_input input{border-radius: 0;height:34px;}
+#groupMain .selectBanner .bannerRight #weike_search_input .btn{background-color: #3399FF;border: none;padding: 7px 12px;}
+#groupResourceListDiv {border: 1px solid #DDDDDD;margin: 15px 15px 5px;}
+#groupPaperListDiv {border: 1px solid #DDDDDD;margin: 15px 15px 5px;}
+#groupBeikeListDiv {border: 1px solid #DDDDDD;margin: 15px 15px 5px;}
+#groupWeikeListDiv {border: 1px solid #DDDDDD;margin: 15px 15px 5px;}
+#groupResourceListDiv table {margin-bottom: 0;}
+#groupPaperListDiv table {margin-bottom: 0;}
+#groupBeikeListDiv table {margin-bottom: 0;}
+#groupWeikeListDiv table {margin-bottom: 0;}
+#groupResourceLiistDiv table td{font-size: 13px;}
+#groupPaperListDiv table td{font-size: 13px;}
+#groupBeikeListDiv table td{font-size: 13px;}
+#groupWeikeListDiv table td{font-size: 13px;}
+
+th[reschecked] {cursor: pointer;}
+th[reschecked='true'] {color:#f90;}
+th[paperchecked] {cursor: pointer;}
+th[paperchecked='true'] {color:#f90;}
+th[bkchecked] {cursor: pointer;}
+th[bkchecked='true'] {color:#f90;}
+th[wkchecked] {cursor: pointer;}
+th[wkchecked='true'] {color:#f90;}
+
+.groupResContent .name {max-width: 340px;color: #333333;}
+.groupResContent .name .sort {color: #3399FF;}
+.groupResContent  a.fancybox{ color: #333333;}
+.groupResContent .useType {width: 104px;text-align: center;}
+.groupResContent .mediaType {width: 104px;text-align: center;}
+.groupResContent .upName {width: 104px;text-align: center;}
+.groupResContent .orgName {width: 164px;text-align: center;}
+.groupResContent .time {width: 104px;text-align: center;}
+.groupResContent .downCount {text-align: center;}
+
+.res_thumb_div {width: 180px;height: 172px;float: left;border-top: 1px solid #DADADA;border-bottom: 1px solid #DADADA;margin: 5px 16px 5px 17px;padding: 20px 20px 0px;}
+.res_thumb_div .res_name {width: 100%;height: 30px;text-align: center;line-height: 30px;color: #333;}
+.res_info_div {display: none;width: 270px;background-color: #F4F8FA;border-left: 5px solid #BCE8F1;position: absolute;}
+.res_info_div ul {padding: 10px;}
+.res_info_div li {list-style: none;font-size: 14px;color: #333;padding: 2px 0;}
+
+#addGroupMemberDiv {width: 680px;height:510px;}
+#addGroupMemberDiv .addGroupMemberType{padding: 0;}
+#addGroupMemberDiv #addGroupMemberTable{height: 400px;}
+#addGroupMemberDiv .selMemberDiv .che_{line-height: 35px;margin: 0;}
+#addGroupMemberDiv .selMemberDiv .che_ input{vertical-align: text-bottom;}
+#addGroupMemberDiv .addGroupMemberType li{list-style: none;float: left;min-width: 70px;height: 28px;background-color: #eaebec;line-height: 28px;text-align: center;margin: 0px 10px 0 0;color: #5e5e5e;padding: 0 10px;}
+#addGroupMemberDiv .addGroupMemberType li.active{background-color: #188eee;}
+#addGroupMemberDiv .addGroupMemberType li>a{color:#666;font-size: 12px;display: block;}
+#addGroupMemberDiv .addGroupMemberType li.active>a{color:#FFF;}
+#addGroupMemberDiv #addGroupMemberSelectInput{border-radius: 0; margin-right: 0px;}
+#addGroupMemberDiv #addGroupMemberSelectInput input{border-radius: 0;height:34px;}
+#addGroupMemberDiv #addGroupMemberSelectInput .btn{background-color: #3399FF;border: none;padding: 7px 12px;}
+#addGroupMemberDiv table {margin-bottom: 0px;}
+#addGroupMemberDiv table .name{width: 134px;}
+#addGroupMemberDiv table .unit{width: 134px;}
+#addGroupMemberDiv table .org{width: 134px;}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    border-top: 1px solid #e7eaec;
+    line-height: 1.42857;
+    padding: 8px;
+    vertical-align: middle;
+}
+/*左侧folder样式*/
+.space-main {
+    width: 1200px;
+    margin: auto auto 100px;
+}
+
+.bk-main-l {
+    float: left;
+    margin-top: 10px;
+    width: 275px;
+}
+
+.bk-main-r {
+    position: relative;
+    float: right;
+    width: 915px;
+    margin-top: 10px;
+}
+.box-wrapper {
+    
+    margin-bottom: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.35);
+    border-radius: 2px;
+}
+
+.bk-classify {
+    position: relative;
+}
+
+.bk-classify .category-btn {
+    position: absolute;
+    display: none;
+    top: 11px;
+    right: 10px;
+}
+
+#mainblog li {
+    list-style: outside none none;
+}
+
+
+
+.box-wrapper h2 {
+    margin: 0;
+    padding-left: 15px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 44px;
+    border-bottom: 1px solid #d9d9d9;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+}
+
+.bk-classify ul li.active {
+    background-color: #e2e2e2;
+}
+.bk-classify ul li {
+    padding: 0 10px;
+}
+
+.bk-classify ul li a {
+    display: block;
+    padding-left: 5px;
+    line-height: 34px;
+    font-size: 12px;
+    color: #5c5c5c;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+/*左侧统计样式*/
+.box-wrapper-inner {
+    padding: 13px 0 15px 0;
+}
+
+.box-wrapper-inner ul {
+    padding-left: 0;
+}
+
+
+.box-wrapper-inner .gallery-statistics-li {
+    float: left;
+    width: 91px;
+    text-align: center;
+    font-size: 14px;
+    border-right: 1px solid #d9d9d9;
+}
+
+.box-wrapper-inner .gallery-statistics-li span {
+    display: block;
+    color: #929292;
+    font-size: 12px;
+}
+
+.border-r-none {
+    border-right: none !important;
+}
+
+.box-wrapper-inner .gallery-statistics-li em {
+    display: block;
+    color: #000000;
+}
+
+em {
+    font-style: normal;
+}
+
+.fb_btn {
+    background: #ff4e00 none repeat scroll 0 0;
+    color: #fff;
+    display: none;
+    font-size: 16px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    right: 20px;
+    text-align: center;
+    top: 10px;
+    width: 125px;
+}
+.xz_btn {
+    background: #ff4e00 none repeat scroll 0 0;
+    color: #fff;
+    display: none;
+    font-size: 16px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    right: 165px;
+    text-align: center;
+    top: 10px;
+    width: 125px;
+}
+.che_btn {
+    background: #ff4e00 none repeat scroll 0 0;
+    color: #fff;
+    display: none;
+    font-size: 16px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    right: 310px;
+    text-align: center;
+    top: 10px;
+    width: 125px;
+}

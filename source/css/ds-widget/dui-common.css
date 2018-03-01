@@ -1,0 +1,279 @@
+.search_del{
+	color:#999;
+	top:35%;
+	right:5px;					
+	cursor:pointer;
+	display:none;
+}	
+
+.input-del{
+	color:#999;
+	top:-23px !important;
+	left:280px;					
+	cursor:pointer;
+	display:none;
+}	
+
+.input-del-inline{
+	color:#999;
+	left:-20px !important;					
+	cursor:pointer;
+	display:none;
+}	
+
+.glyphicon-remove.search_cha{background:url(../../images/icon/glyphicon-remove-search_cha.png) no-repeat;width:11px; height:11px; font-size:0; overflow:hidden;}
+
+input::-ms-clear{display:none;} /*去掉IE11表单默认的×号*/
+
+.l5{
+	margin-left:5px;
+}
+
+.right{
+	float:right !important;
+}
+
+.ztree-struc{
+	width:212px;
+	height:600px;
+	overflow:auto;
+}
+
+.ztree-struc ul{
+	-webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+}
+
+/* .ztree-struc,.ztree-struc *,.ztree-struc :before,.ztree-struc :after{
+	-webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+}
+ */
+
+.ztree li span.button.add {margin-left:2px; margin-right: 2px; background-position:-144px 0; vertical-align:top; *vertical-align:middle}
+
+.l30{
+	margin-left:30px;
+}
+
+.share-ul{
+	width: 96%;
+	display: inline-block;
+}
+
+.share-ul2{
+	width: 100%;
+	display: inline-block;
+}
+
+a{
+	cursor:pointer;
+}
+
+.sr-overflow {
+	width: 7em;
+	word-break: keep-all;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.introduce-options{
+	color:#00AEEF;
+	width:110px;
+}
+
+.mr40{
+	margin-left:40px;
+}
+
+.mr60{
+	margin-left:60px;
+}
+
+.mr80{
+	margin-left:80px;
+}
+
+.code span{
+	color:#666;
+}
+
+.code label{
+	color:#888;
+	margin-bottom:0px !important;
+}
+
+.code .codeinfo{
+	background-color:#EEE;padding-top: 10px; padding-bottom: 10px;
+}
+
+.inline{
+	display:inline;
+}
+
+.abso{
+	position:absolute !important;
+}
+
+/* 自动完成BEGIN */
+.autocomplete .table{
+	border:1px solid #DADADA !important;
+	font-size: 12px !important;
+	color:#666 !important;
+	cursor:pointer !important;
+	margin-bottom:0px !important;
+}
+
+.autocomplete span{
+	font-size: 12px !important;
+	color:#666 !important;
+	float:none !important;
+	position:relative !important;
+	border-bottom:0px !important;
+}
+
+.myautocomplete input{
+	float:none !important;
+}
+
+.myautocomplete a {
+	margin: 5px 0px 5px 6px !important;
+}
+
+.autocomplete .table > thead > tr > th,.autocomplete .table > tbody > tr > td{
+	padding:3px !important;
+	border-top:0px !important;
+}
+
+.autocomplete span{
+	color:#5BC0DE !important;
+	padding:3px !important;
+	cursor:auto !important;
+}
+
+.autocomplete i{
+	color:#ED9C28 !important;
+}
+
+.autocomplete #pre_page{
+	margin-right: 5px !important;
+}
+
+.autocomplete #next_page{
+	margin-left: 8px !important;
+}
+
+.autocomplete .page > td:hover{
+	background-color:#fff !important;
+	cursor:auto !important;
+}
+
+.autocomplete .page > td{
+	border-top:1px solid #DDD !important;
+}
+
+.autocomplete .head{
+	color:#5BC0DE !important;
+	cursor:auto !important;
+}
+
+.sel-hover{
+	background-color: #DFF0D8 !important;
+	color:#000;
+}
+
+.auto-textoverflow{
+	overflow: hidden;
+	white-space: nowrap;
+	width: 200px;
+	text-overflow: ellipsis;
+}
+
+.first-page{background:url(../../images/icon/first.png) no-repeat; width:13px; height:13px;font-size:0;overflow:hidden; }
+.last-page{background:url(../../images/icon/last.png) no-repeat; width:13px; height:13px; font-size:0;overflow:hidden;}
+.prev-page{background:url(../../images/icon/prev.png) no-repeat; width:13px; height:13px; font-size:0;overflow:hidden;}
+.next-page{background:url(../../images/icon/next.png) no-repeat; width:13px; height:13px; font-size:0;overflow:hidden;}
+/* 自动完成END */
+
+/* 文本域 */
+.ds-textarea{
+    box-sizing: content-box;
+}
+
+.tip-style{
+	color:red;
+	font-size:12px;
+	margin-right:0px !important;
+}
+
+.auto-textarea {
+	/* width: 300px;  */
+	min-height: 100px; 
+	max-height: 300px;
+	margin-left: auto; 
+	margin-right: auto; 
+	outline: 0; 
+	word-wrap: break-word;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.drop-struc-border{
+	border:1px solid #DADADA;
+	height:300px;
+	overflow:auto;
+	position:absolute;
+	background-color:#fff;
+	z-index:1999;
+}
+
+.none{
+	display:none;
+}
+
+textarea{
+	resize:none;
+}
+
+/* 回到顶部样式 */
+.go-top{
+	position: absolute;
+	top:780px;
+	right:3%;
+	display:none;
+}
+.go-top-img{
+	background:transparent url(../image/top01.png) no-repeat scroll left center;
+	height:47px;
+	width:47px;
+	cursor:pointer;
+}
+
+.inline{
+	display:inline;
+}
+
+/* 文本框样式2015-12-3 */
+.dui-input-label{
+	float: right;
+	margin-right: 2px !important;
+	color: red;
+	font-size: 12px;
+	margin-bottom:0px;
+	padding-top:0px !important;
+}
+
+.dui-input-label-inline{
+	margin-left: 10px !important;
+	color: red;
+	font-size: 12px;
+	margin-bottom:0px;
+}
+
+/* 输入框高度 */
+.h55{
+	height:55px;
+}

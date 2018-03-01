@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+.px-main {
+	wdith: 100%
+}
+
+.crumbs {
+	width: 100%;
+	height: 31px;
+	background: url(../../images/yp/web/crumbsbg.jpg) repeat-x;
+	text-align: left
+}
+
+.crumbs-imgico {
+	padding-left: 10px;
+	padding-top: 6px
+}
+
+.crumbs-text {
+	font-size: 14px;
+	color: 6d6a6a;
+	font-family: "宋体";
+	line-height: 31px
+}
+
+.search input {
+    background: rgba(0, 0, 0, 0) url("../../images/search_btn01.jpg") no-repeat scroll 0 0;
+    border: 0 none;
+    cursor: pointer;
+    height: 36px;
+    width: 76px;
+}
+
+.submain-banner {
+	width: 100%;
+	height: 165px;
+}
+
+.submain-trainingclass {
+	background: #b4c4c4  url(../../images/yp/web/pxb.jpg) top center no-repeat;
+}
+
+.submain-news {
+	background: #b4c4c4  url(../../images/yx/jskj-banner.jpg) top center;
+	background-size: cover;
+}
+
+.submain-pxb {
+	background: #b4c4c4  url(../../images/yx/Information.jpg) top center;
+	background-size: cover;
+}
+
+.submain-resource {
+	background: #b4c4c4  url(../../images/yx/yxzy1.jpg) top center;
+	background-size: cover;
+}
+
+.submain-topic {
+	background: #b4c4c4  url(../../images/yx/yxzt1.jpg) top center;
+	background-size: cover;
+}
+
+.submain-video {
+	background: #b4c4c4  url(../../images/yx/yxsp1.jpg) top center;
+	background-size: cover;
+}
+.submain-pve {
+	background: #6aa9d4 url(../../images/yp/web/pxxd.jpg) top center no-repeat;
+}
+.submain-con {
+	width: 980px;
+	background: #FFF;
+	height: auto;
+	min-height: 590px;
+	border: 1px solid #f0f0f0;
+	margin: -80px auto 0px;
+	; -moz-box-shadow: 1px 1px 4px #666;
+	-webkit-box-shadow: 1px 1px 4px #666;
+	box-shadow: 1px 1px 4px #666;
+ /* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#666666')";
+}
+
+/******************文章 (原培训新闻样式)******************/
+.submain-article {
+	background: #b4c4c4  url(../../images/yp/web/pxtl.jpg) top center;
+	background-size: cover;
+}
+.split {
+	width: 950px;
+	overflow: hidden;
+	color: #3c3c3c;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	padding-top: 10px;
+	margin: 0 auto;
+	border-bottom: 1px solid #e0e0e0;
+	text-align:left;
+}
+
+.newslist dt {
+	overflow: hidden;
+	color: #3c3c3c;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	padding-top: 10px;
+}
+.split:hover{
+	background-color: #dff0d8;
+}
+.newslist .zz {
+	overflow: hidden;
+	color: #888888;
+	font-size: 14px;
+	font-family: "宋体";
+	line-height: 26px;
+	margin-top: 20px;
+}
+
+.newslist .ky {
+	text-align: right;
+	line-height: 26px;
+	overflow: hidden;
+	color: #888888;
+	font-size: 14px;
+	font-family: "宋体";
+	margin-top: 20px;
+}
+/******************文章 (原培训新闻样式)******************/

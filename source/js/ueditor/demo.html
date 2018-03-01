@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="no-js" lang="en">
+<head>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ueditor</title>	
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/skins/default.css"/> 
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../js/base-config.js"></script>
+	<script type="text/javascript" src="../js/artDialog.source.js"></script>
+	<!-- 配置文件 -->
+	<script type="text/javascript" src="ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="ueditor.all.js"></script>
+	<!-- 显示内容时需要引入，用来显示特定的内联样式 -->
+	<script type="text/javascript" src="ueditor.parse.js"></script>
+	<!-- 公式插件引入 -->
+	<script type="text/javascript" charset="utf-8" src="kityformula-plugin/addKityFormulaDialog.js"></script>
+	<script type="text/javascript" charset="utf-8" src="kityformula-plugin/getKfContent.js"></script>
+	<script type="text/javascript" charset="utf-8" src="kityformula-plugin/defaultFilterFix.js"></script>
+
+</head>
+
+<body style="padding:10px">
+    <!-- 加载编辑器的容器 -->
+    <script id="editor" type="text/plain" style="width:1024px;"></script>
+	<!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('editor', {
+			toolbars: [
+				['fullscreen', 'source', '|', 'undo', 'redo', '|',
+            'bold', 'italic', 'underline', 'fontborder', 'strikethrough','|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', '|',
+            'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+            'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+            'link', 'unlink', 
+            'simpleupload','kityformula']
+			],
+			autoHeightEnabled: true,
+			autoFloatEnabled: true
+		});
+
+		//var lang = ue.getOpt('lang'); 
+		//alert(lang);
+    </script>
+	
+	<div id="btns">
+		<div>
+			<button onclick="getImg()">获得内容中所有图片地址</button>
+			<button onclick="getContent()">获得内容（html代码段）</button>
+			<button onclick="setContent()">设置默认显示内容</button>
+			<button onclick="appengToContent()">追加内容</button>
+			<button onclick="getContentTxt()">获得纯文本</button>
+			<button onclick="getPlainTxt()">获得带格式的纯文本</button>
+			<button onclick="hasContent()">判断是否有内容</button>
+			<button onclick="setFocus()">使编辑器获得焦点</button>
+			<button onmousedown="setblur(event)">使编辑器失去焦点</button>
+			<button onmousedown="isFocus(event)">编辑器是否获得焦点</button>
+			<button onclick="setDisabled()">设置编辑器不可编辑</button>
+			<button id="enable" onclick="setEnabled()">设置编辑器可以编辑</button>
+			<button onclick=" UE.getEditor('editor').setHide()">隐藏编辑器</button>
+			<button onclick=" UE.getEditor('editor').setShow()">显示编辑器</button>
+			<button onclick=" UE.getEditor('editor').setHeight(300)">设置高度为300默认关闭了自动长高</button>
+			<button onclick="showContent()">查看内容显示效果</button>
+		</div>
+	</div>
+	
+	<div id="mycontent" style="border:1px solid;height:350px;width:1000px;overflow:auto">
+	
+	
+	</div>
+</body>
+<script type="text/javascript">
+	function showContent(){
+		var content_str = UE.getEditor('editor').getContent();
+		$("#mycontent")[0].innerHTML = content_str;
+		
+		// 语法    
+		// uParse(selector,[option])    
+		/*    
+			selector支持    
+			id,class,tagName    
+		*/    
+		/*    
+			目前支持的参数    
+			option:    
+			highlightJsUrl 代码高亮相关js的路径 如果展示有代码高亮，必须给定该属性    
+			highlightCssUrl 代码高亮相关css的路径 如果展示有代码高亮，必须给定该属性    
+			liiconpath 自定义列表样式的图标路径，可以不给定，默认'http://bs.baidu.com/listicon/',    
+			listDefaultPaddingLeft : 自定义列表样式的左边宽度 默认'20',    
+			customRule 可以传入你自己的处理规则函数，函数第一个参数是容器节点    
+		*/ 
+		uParse('#mycontent',
+		{
+			'highlightJsUrl':'third-party/SyntaxHighlighter/shCore.js',
+			'highlightCssUrl':'third-party/SyntaxHighlighter/shCoreDefault.css'
+		});
+	}
+	<!-- 常用方法总结 2016-1-11-jyy-->
+	//获取内容中所有图片地址
+	function getImg(){
+		var root = UE.htmlparser(UE.getEditor('editor').getContent(), true);
+		var imgs = new Array();
+		imgs = root.getNodesByTagName('img' );
+		for (i = 0; i < imgs.length; i++){
+			alert(imgs[i].getAttr( 'src'));
+		}
+	}
+	//获取内容（html代码段）
+	function getContent() {
+        alert(UE.getEditor('editor').getContent());
+    }
+	//设置默认显示内容
+	function setContent() {
+        UE.getEditor('editor').setContent('<span style="color:red">欢迎使用ueditor</span>');
+    }
+	//追加内容
+	function appengToContent() {
+        UE.getEditor('editor').setContent('追加内容', true);
+    }
+	//获得纯文本
+	function getContentTxt() {
+        alert(UE.getEditor('editor').getContentTxt());
+    }
+	//获得带格式的纯文本
+	function getPlainTxt() {
+        alert(UE.getEditor('editor').getPlainTxt())
+    }
+	//判断是否有内容
+	function hasContent() {
+        var check_result = UE.getEditor('editor').hasContents();
+        alert(check_result);
+    }
+	//使编辑器获得焦点
+	function setFocus() {
+        UE.getEditor('editor').focus();
+    }
+	//使编辑器失去焦点
+    function setblur(e){
+        UE.getEditor('editor').blur();
+        UE.dom.domUtils.preventDefault(e)
+    }
+	//编辑器是否获得焦点
+    function isFocus(e){
+        alert(UE.getEditor('editor').isFocus());
+        UE.dom.domUtils.preventDefault(e)
+    }
+	//设置编辑器不可编辑
+	function setDisabled() {
+        UE.getEditor('editor').setDisabled('fullscreen');
+    }
+	//设置编辑器可以编辑
+    function setEnabled() {
+        UE.getEditor('editor').setEnabled();
+    }
+</script>
+
+</html>

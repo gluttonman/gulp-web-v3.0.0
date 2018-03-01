@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- endinject-->
+</head>
+<body>
+<div class="container" id="wrapper">
+    <nav class="nav navbar">
+        <ul>
+            <li>首页</li>
+            <li>新闻</li>
+            <li>活动</li>
+            <li>资源</li>
+            <li>专题</li>
+        </ul>
+    </nav>
+</div>
+<!-- inject:js -->
+<script src="../js/jquery/jquery-1.7.2.js"></script>
+<script src="../js/jquery/jquery.cookie.js"></script>
+<script src="../js/bootstrap/bootstrap-3.0.3.js"></script>
+<script src="../js/base/template.js"></script>
+<script src="../js/base/base64.js"></script>
+<script src="../js/base/artDialog.js"></script>
+<script src="../js/base/thickbox.js"></script>
+<script src="../js/base/iframeTools.js"></script>
+<script src="../js/base/base-config.js"></script>
+<script src="../js/base/newConfig.js"></script>
+<script src="../js/index.js"></script>
+<script>
+    var documentType = document.querySelector("#wrapper")
+    console.info(documentType.nodeType)
+    console.info(documentType.nodeName)
+    console.info(documentType.nodeValue)
+    console.info(documentType.childNodes)
+    console.info(documentType.ownerDocument)
+    console.info(documentType.ownerDocument.nodeType)
+    console.info(documentType.ownerDocument.nodeName)
+    console.info(documentType.ownerDocument.nodeValue)
+    console.info(documentType.ownerDocument.childNodes)
+    console.info(documentType.ownerDocument.documentElement)
+    console.info(documentType.ownerDocument.childNodes[0]==documentType.ownerDocument.documentElement)
+    console.info(documentType.ownerDocument.childNodes[1]==documentType.ownerDocument.documentElement)
+    window.onload = function(){
+        console.info("onload is running!")
+    }
+    window.ready = function(){
+        console.info("onready is running!")
+    }
+</script>
+<!-- endinject-->
+</body>
+</html>

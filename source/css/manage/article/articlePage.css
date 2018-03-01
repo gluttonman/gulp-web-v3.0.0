@@ -1,0 +1,46 @@
+/******************文章 (原培训新闻样式)******************/
+.submain-article {
+	background: #b4c4c4  url(../../images/yp/web/pxtl.jpg) top center;
+	background-size: cover;
+}
+.split {
+	width: 950px;
+	overflow: hidden;
+	color: #3c3c3c;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	padding-top: 10px;
+	margin: 0 auto;
+	border-bottom: 1px solid #e0e0e0;
+	text-align:left;
+}
+
+.newslist dt {
+	overflow: hidden;
+	color: #3c3c3c;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	padding-top: 10px;
+}
+.split:hover{
+	background-color: #dff0d8;
+}
+.newslist .zz {
+	overflow: hidden;
+	color: #888888;
+	font-size: 14px;
+	font-family: "宋体";
+	line-height: 26px;
+	margin-top: 20px;
+}
+
+.newslist .ky {
+	text-align: right;
+	line-height: 26px;
+	overflow: hidden;
+	color: #888888;
+	font-size: 14px;
+	font-family: "宋体";
+	margin-top: 20px;
+}
+/******************文章 (原培训新闻样式)******************/

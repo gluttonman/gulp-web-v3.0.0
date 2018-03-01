@@ -1,0 +1,8 @@
+@charset "utf-8";
+/*通用样式*/
+#mainFeed li { list-style: outside none none; }
+.clear { clear: both; }
+* { font-family: Arial, "Microsoft YaHei"; }
+em { font-style: normal; }
+body { font-family: "Microsoft yahei"; background: #ffffff; }
+#mainClassNews{margin: 10px auto 150px;width: 1200px; background-color: #fff;padding: 20px;}
