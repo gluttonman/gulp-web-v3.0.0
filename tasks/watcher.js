@@ -9,8 +9,8 @@ const exec = require("child_process").exec
 const dateFormat = require("dateformat")
 gulp.task("watcher", function (finish) {
     let task = new Task()
-    let htmlPath = (task.Config.HTML_SOURCE_PATH+ "/**/*.html").replace("./","");
-    let notWatherHtml = (task.Config.ROOT + "/common/**/*.html").replace("./","")
+    let htmlPath = (task.Config.HTML_SOURCE_PATH+ "/**/*.tpl.html").replace("./","");
+    let notWatherHtml = (task.Config.ROOT + "/common/**/*.tpl.html").replace("./","")
     let jsPath = (task.Config.JS_SOURCE_PATH +"/**/*.js").replace("./","")
 
     let ueditor = ("!"+task.Config.JS_SOURCE_PATH +"/ueditor/ueditor.all.js")
