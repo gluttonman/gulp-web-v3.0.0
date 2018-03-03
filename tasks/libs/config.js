@@ -53,7 +53,8 @@ Config.getTargetFilePath = function (config, filename) {
         if(!fileConfig || !Object.keys(fileConfig).includes(item)){
             singleFile =  Object.is(config,this.JsConfig)?this.fetchJsSingleFile(filePath, true):this.fetchCssSingleFile(filePath, true)
         }
-        fileConfig = fileConfig[item]
+        //当fileConfig中不包含这个文件的配置，则直接加载文件路径
+        fileConfig = fileConfig && Object.keys(fileConfig).includes(item)?fileConfig[item]:null
     })
     if(singleFile){
         return singleFile

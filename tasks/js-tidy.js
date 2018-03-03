@@ -11,10 +11,6 @@ const path = require("path")
 const through2 = require("through2")
 const exec = require("child_process").exec
 
-gulp.task("test-uglify-js", function () {
-    return gulp.src("1.js").pipe(minifier({ie8:true},UglifyJs)).pipe(gulp.dest("js"))
-})
-
 /*
  * 压缩单独的js文件
  * TestCommand : gulp uglify-js --path jh/jhAdd.js

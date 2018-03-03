@@ -30,7 +30,8 @@ gulp.task("watcher", function (finish) {
                     console.info(dateFormat(new Date(),"yyyy-mm-dd HH:MM:ss"),path)
                     exec("gulp tpl-all")
                 }else{
-                    let relativePath = path.substring(path.indexOf("html")+5,path.length)
+                    //TODO 此处暂时将.tpl处理掉,待后续有时间修改
+                    let relativePath = path.substring(path.indexOf("html")+5,path.length).replace(".tpl","")
                     console.info(dateFormat(new Date(),"yyyy-mm-dd HH:MM:ss"),relativePath)
                     exec("gulp tpl --dir "+ relativePath)
                 }

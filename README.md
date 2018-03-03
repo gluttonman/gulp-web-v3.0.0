@@ -1,3 +1,11 @@
+
+#v3.0.8#
+将html模板文件重新规范名，在html前面增加.tpl以区分注入后的html文件。如下：
+template file: *.tpl.html
+inject file: *.html
+修改已知问题
+
+
 #v3.0.0版本规划#
 一.3.0.0版本应该简化config的配置文件，配置文件中只配置合并压缩处理的文件即可，单独的文件应不需要在在进行配置
 二.增加js和css全部压缩的功能
@@ -18,20 +26,18 @@ gulp-web是自动化前端工具
 gulp watcher  监听工程下的html css js文件，当这些文件有变化后，工具会自动执行一下命令来构建项目
 
 #js文件处理#
-gulp uglify-js --path jh/jhAdd.js 压缩指定的一个js文件
+gulp uglify-js--path jh/jhAdd.js 压缩指定的一个js文件
 
-gulp uglify-concat-js --dir  dirname 压缩指定文件夹下面的所有js文件，并以文件夹名称为最后名称，压缩到一个文件中
+gulp uglify-jsconfig  根据jsConfig来压缩js文件
 
-example: jquery
-            jquery.js
-            jquery.cookie.js
-            jquery.ztree.js
-        gulp uglify-concat-js --dir jquery   最后 三个文件会压缩到一个jquery.min.js文件中
+gulp uglify-js-all 压缩所有的js文件
 
 #css文件处理#
 gulp uglify-css --path bootstrap/bootstrap.css 压缩指定的css文件
 
-gulp uglify-concat-css --dir dirname 和js压缩命令是一样的
+gulp uglify-css-config 根据cssConfig来压缩css文件
+
+gulp uglify-css-all 压缩所有的css文件
 
 #html文件处理#
 
@@ -42,7 +48,5 @@ gulp tpl-all 批量注入html目录下的所有html文件，以源文件的形�
 
 gulp tpl-all --min 批量注入html目录下的所有html文件，以压缩文件的形式注入（js,css）
 
-#3.0.8将html模板文件重新规范名，在html前面增加.tpl以区分注入后的html文件。如下：
-template file: *.tpl.html
-inject file: *.html
+
 

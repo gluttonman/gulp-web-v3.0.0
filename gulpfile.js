@@ -12,7 +12,7 @@ let WebConfig = GulpWeb.WebConfig
 //key的名字就是文件夹的名字
 let JsConfig = {
     jquery :{
-        target : path.normalize(WebConfig.JS_TARGET_PATH + "/jquery/jquery.min.js"),//如果没有此熟悉，就默认到项目根目录的jquery/jquery-1.12.4.min.js,
+        target : path.normalize(WebConfig.JS_TARGET_PATH + "/jquery/jquery.min.js"),//如果没有此配置，就默认到项目根目录的jquery/jquery-1.12.4.min.js,
         source:{
             jquery : path.normalize(WebConfig.JS_SOURCE_PATH + "/jquery/jquery-1.7.2.js"),
             cookie : path.normalize(WebConfig.JS_SOURCE_PATH + "/jquery/jquery.cookie.js")
@@ -87,6 +87,13 @@ let JsConfig = {
 
 
 let CssConfig = {
+    "bootstrap" :{
+        target : path.normalize(WebConfig.CSS_TARGET_PATH + "/bootstrap/bootstrap.min.css"),//如果没有此配置，就默认到项目根目录的jquery/jquery-1.12.4.min.js,
+        source:{
+            "bootstrap" : path.normalize(WebConfig.CSS_SOURCE_PATH + "/bootstrap/bootstrap.css"),
+            "bootstrap-theme" : path.normalize(WebConfig.CSS_SOURCE_PATH + "/bootstrap/bootstrap-theme.css")
+        },
+    }
 }
 
 

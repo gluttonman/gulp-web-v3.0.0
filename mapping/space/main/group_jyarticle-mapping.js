@@ -23,17 +23,17 @@ class JYArticle extends Mapping{
             let defaultFilterFix = this.Config.getTargetFilePath(this.JsConfig, "ueditor/kityformula-plugin/defaultFilterFix")
             return Array.of(jqueryUiWidget, duiSearch, duiInput,ueidtorConfig, ueidtroAll, addKityFormulaDialog,getKfContent,defaultFilterFix)
         }else{
-            let dsWidgetJs = this.JsConfig["ds-widget"]
-            let ueditor = this.JsConfig["ueditor"]
-            let kityPlugin = ueditor["kityformula-plugin"]
-            let jqueryUiWidget = dsWidgetJs["jquery-ui-widget"]["source"]
-            let duiSearch = dsWidgetJs["dui-search"]["source"]
-            let duiInput = dsWidgetJs["dui-input"]["source"]
-            let ueidtorConfig = ueditor["ueditor.config"]["source"]
-            let ueidtroAll = ueditor["ueditor.all"]["source"]
-            let addKityFormulaDialog = kityPlugin["addKityFormulaDialog"]["source"]
-            let getKfContent = kityPlugin["getKfContent"]["source"]
-            let defaultFilterFix = kityPlugin["defaultFilterFix"]["source"]
+            const dsWidget = "ds-widget"
+            const ueditor = "ueditor"
+            const kityPlugin = "kityformula-plugin"
+            let jqueryUiWidget = this.Config.getJsSourceFiles(`${dsWidget}/jquery-ui-widget`)
+            let duiSearch = this.Config.getJsSourceFiles(`${dsWidget}/dui-search`)
+            let duiInput = this.Config.getJsSourceFiles(`${dsWidget}/dui-input`)
+            let ueidtorConfig = this.Config.getJsSourceFiles(`${ueditor}/ueditor.config`)
+            let ueidtroAll = this.Config.getJsSourceFiles(`${ueditor}/ueditor.all`)
+            let addKityFormulaDialog = this.Config.getJsSourceFiles(`${kityPlugin}/addKityFormulaDialog`)
+            let getKfContent = this.Config.getJsSourceFiles(`${kityPlugin}/getKfContent`)
+            let defaultFilterFix = this.Config.getJsSourceFiles(`${kityPlugin}/defaultFilterFix`)
             return Array.of(jqueryUiWidget, duiSearch,duiInput, ueidtorConfig, ueidtroAll, addKityFormulaDialog, getKfContent, defaultFilterFix)
         }
     }
@@ -44,9 +44,9 @@ class JYArticle extends Mapping{
             let dsWidgetCommon = this.Config.getTargetFilePath(this.CssConfig, "dsWidget/common")
             return Array.of(thickBox, fancyBox, dsWidgetCommon)
         }else{
-            let thickBox = this.CssConfig["thickbox"]["source"]
-            let fancyBox = this.CssConfig["fancybox"]["source"]
-            let dsWidgetCommon = this.CssConfig["dsWidget"]["common"]["source"]
+            let thickBox = this.Config.getCssSourceFiles("thickbox")
+            let fancyBox = this.Config.getCssSourceFiles("fancybox")
+            let dsWidgetCommon = this.Config.getCssSourceFiles("dsWidget/common")
             return Array.of(thickBox, fancyBox, dsWidgetCommon)
         }
     }
@@ -56,7 +56,7 @@ class JYArticle extends Mapping{
             let articleCss = this.Config.getTargetFilePath(this.SpaceCssConfig, "space_article_pages")
             return Array.of(articleCss)
         }else{
-            let articleCss = this.Config.getCssSourceFiles(this.SpaceCssConfig, "space_article_pages")
+            let articleCss = this.Config.getCssSourceFiles("space_article_pages")
             return Array.of(articleCss)
         }
     }

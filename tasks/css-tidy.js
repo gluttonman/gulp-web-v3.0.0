@@ -9,7 +9,8 @@ const cleanCSS = require("gulp-clean-css")
 const rename = require("gulp-rename")
 const Task = require("./libs/task")
 const path = require("path")
-
+const through2 = require("through2")
+const exec = require("child_process").exec
 /*
  * TestCommand : gulp uglify-css --path jh
  *
@@ -30,4 +31,32 @@ gulp.task("uglify-css", function (finish) {
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename(minName))
         .pipe(gulp.dest(targetDir));
+})
+
+
+/**
+ * 执行Config.CssConfig中的所有css文件的压缩
+ */
+gulp.task("uglify-css-config", function () {
+    let task = new Task()
+    let cssConfig = task.Config.CssConfig
+    for (let cssFileName in cssConfig) {
+        console.info(cssConfig[cssFileName])
+        exec("gulp uglify-css --dir " + cssFileName)
+    }
+})
+
+
+
+/*压缩所有js文件*/
+gulp.task("uglify-css-all", function () {
+    let task = new Task()
+    let notIncludeFile = "!"+task.Config.CSS_SOURCE_PATH + path.sep + "**" + path.sep + "*.min.css"
+    let sourceFiles = task.Config.CSS_SOURCE_PATH + path.sep + "**" + path.sep + "*.css"
+    let targetFilePath = task.Config.CSS_TARGET_PATH
+    return gulp.src(Array.of(sourceFiles, notIncludeFile))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(rename(function (fileNameObj) {
+            fileNameObj.extname = ".min.css"
+        })).pipe(gulp.dest(targetFilePath))
 })

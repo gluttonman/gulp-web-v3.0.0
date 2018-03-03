@@ -69,6 +69,7 @@ gulp.task("tpl-all", function (finish) {
         .pipe(inject(gulp.src([task.Config.JS_SOURCE_PATH + "/index.js", task.Config.CSS_SOURCE_PATH + "/index.css"]), {//至少需要有一个js文件读入，这个文件其实没有实际意义
             transform: function (filePath, file, index, length, targetFile) {
                 let relativePath = dir?path.normalize(dir + "/" + targetFile.relative):path.normalize(targetFile.relative)
+                relativePath = relativePath.replace(".tpl","")
                 let files = injectFiles(relativePath, argv.min)//获取需要向html注入的js、css文件列表
                 let compareStuff = file.relative.substring(file.relative.lastIndexOf("."), file.relative.length)
                 let fileStr = ""
@@ -76,6 +77,9 @@ gulp.task("tpl-all", function (finish) {
                     let stuff = file.substring(file.lastIndexOf("."),file.length)
                     if(stuff != compareStuff){
                         return true
+                    }
+                    if(!fs.existsSync(file)){
+                        return true;
                     }
                     if (relative) {
                         file = file.replace("./", "").replace(process.cwd(),"");
@@ -95,7 +99,11 @@ gulp.task("tpl-all", function (finish) {
                 return fileStr
             },
             relative: true
-        })).pipe(gulp.dest(htmlTargetPath))
+        }))
+        .pipe(rename(function(path){
+            path.basename = path.basename.replace(".tpl","")
+        }))
+        .pipe(gulp.dest(htmlTargetPath))
 })
 
 function deepPath(relativePath) {
