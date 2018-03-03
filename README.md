@@ -22,8 +22,7 @@ gulp-web自动化前端工具
 #0.0.1#
 gulp-web是自动化前端工具
 
-
-gulp watcher  监听工程下的html css js文件，当这些文件有变化后，工具会自动执行一下命令来构建项目
+gulp watcher [--min] 监听工程下的html css js文件，当这些文件有变化后，工具会自动执行一下命令来构建项目
 
 #js文件处理#
 gulp uglify-js--path jh/jhAdd.js 压缩指定的一个js文件
