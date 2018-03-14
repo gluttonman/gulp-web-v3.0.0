@@ -9,3 +9,4 @@ node_modules
 .idea
 .npmignore
 gulpfile.js
+npm-debug.log

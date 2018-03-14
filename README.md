@@ -1,4 +1,5 @@
-
+#v3.0.11#
+gulp watcher时，对于common目录下注入失败的问题处理
 #v3.0.8#
 将html模板文件重新规范名，在html前面增加.tpl以区分注入后的html文件。如下：
 template file: *.tpl.html

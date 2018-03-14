@@ -29,15 +29,15 @@ gulp.task("watcher", function (finish) {
             }
             let path = event.path
             if (path.indexOf("html") > 0) {
-                if(path.indexOf("common")>0){
-                    console.info(dateFormat(new Date(),"yyyy-mm-dd HH:MM:ss"),path, argv.min)
-                    if(argv.min){
-                        exec("gulp tpl-all --min")
-                    }else{
-                        exec("gulp tpl-all")
-                    }
-
-                }else{
+                // if(path.indexOf("common")>0){
+                //     console.info(dateFormat(new Date(),"yyyy-mm-dd HH:MM:ss"),path, argv.min)
+                //     if(argv.min){
+                //         exec("gulp tpl-all --min")
+                //     }else{
+                //         exec("gulp tpl-all")
+                //     }
+                //
+                // }else{
                     //TODO 此处暂时将.tpl处理掉,待后续有时间修改
                     let relativePath = path.substring(path.indexOf("html")+5,path.length).replace(".tpl","")
                     console.info(dateFormat(new Date(),"yyyy-mm-dd HH:MM:ss"),relativePath, argv.min)
@@ -46,7 +46,7 @@ gulp.task("watcher", function (finish) {
                     }else{
                         exec("gulp tpl --dir "+ relativePath)
                     }
-                }
+                //}
 
             } else if(path.indexOf("js")>0){
                 let relativePath = path.substring(path.indexOf("js")+3,path.length)
