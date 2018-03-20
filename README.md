@@ -1,3 +1,5 @@
+#v3.0.13#
+gulp uglify-js-all时，压缩问题处理
 #v3.0.11#
 gulp watcher时，对于common目录下注入失败的问题处理
 #v3.0.8#
