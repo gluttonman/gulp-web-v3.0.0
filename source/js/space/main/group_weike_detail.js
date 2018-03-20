@@ -513,7 +513,7 @@ function followInitial(type, btn) {
                     url: url_path_html + "/yx/moke/addFollowResource",
                     dataType: "json",
                     data: {"ResourceData": JSON.stringify(selectedResourceObject.getSelectedFollowResource())},
-                    success(res){
+                    success: function(res){
                         if (res.success) {
                             selectedResourceObject.appendSelectedFollowResource(res.data)
                             dialogClose("保存成功！", 2, 200);

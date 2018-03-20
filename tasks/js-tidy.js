@@ -10,7 +10,7 @@ const Task = require("./libs/task")
 const path = require("path")
 const through2 = require("through2")
 const exec = require("child_process").exec
-
+const plumber = require("gulp-plumber")
 /*
  * 压缩单独的js文件
  * TestCommand : gulp uglify-js --path jh/jhAdd.js
@@ -54,11 +54,19 @@ gulp.task("uglify-js-all", function () {
     let sourceFiles = task.Config.JS_SOURCE_PATH + path.sep + "**" + path.sep + "*.js"
     let targetFilePath = task.Config.JS_TARGET_PATH
     return gulp.src(Array.of(sourceFiles, notIncludeFile))
-        .pipe(through2.obj(function (file, encode, callback) {
-            let result = UglifyJs.minify(file, {ie8: true})
-            file.content = result.code
+        .pipe(plumber({
+            errorHandler: function(error){
+                console.error(error.fileName, error.message)
+                this.emit("end");
+            }
+        }))
+        .pipe(through2.obj(function(file, encode, callback) {
+            console.info(file.path)
             callback(null, file)
-        })).pipe(rename(function (fileNameObj) {
+        }))
+        .pipe(minifier({ie8:true},UglifyJs))
+        .pipe(rename(function (fileNameObj) {
             fileNameObj.extname = ".min.js"
-        })).pipe(gulp.dest(targetFilePath))
+        }))
+        .pipe(gulp.dest(targetFilePath))
 })

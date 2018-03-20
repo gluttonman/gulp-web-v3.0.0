@@ -93,7 +93,7 @@ function init(data) {
 }
 
 function refreshHdList(page_number){
-    let pageNumber = page_number?page_number:1
+    var pageNumber = page_number?page_number:1
     toHdPage(pageNumber)
     lastHdList()
 }
